@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script language="JavaScript">
+            //Ajusta el tamaño de un iframe al de su contenido interior para evitar scroll
+            function autofitIframe(id){
+                if (!window.opera && document.all && document.getElementById){
+                    id.style.height=id.contentWindow.document.body.scrollHeight;
+                } else if(document.getElementById) {
+                    id.style.height=id.contentDocument.body.scrollHeight+"px";
+                }
+            }
+        </script>
+        <iframe id="ifrmEncuesta" src="https://goo.gl/forms/EMyKyZGHhVazBX533" width="100%" height="100%" frameborder="0" transparency="transparency" onload="autofitIframe(this);"></iframe>
+    </body>
+</html>
